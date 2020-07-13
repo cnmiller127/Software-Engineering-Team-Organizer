@@ -9,8 +9,27 @@ const OUTPUT_DIR = path.resolve(__dirname, "output");
 const outputPath = path.join(OUTPUT_DIR, "team.html");
 
 const render = require("./lib/htmlRenderer");
+const Employee = require("./lib/Employee");
+const questions = [{type: "input", name: "name", message: "Enter name: "},
+{type: "input", name: "iD", message: "Enter employee ID #: "},
+{type: "input", name: "eMail", message: "Enter employee e-mail address: "},
+{type: "input", name: "officeNum", message: "Enter employee office number: "},
+{type: "list", name: "position", message: "Select employee type", choices: ["Employee", "Engineer", "Manager"]}];
 
+async function managerGen(){
+    try{
+    const {name, iD, eMail, officeNum, position} = await inquirer.prompt(questions); 
+    const manager = new Manager.Manager(name, iD, eMail, officeNum);
+    console.log(manager);
+    console.log(manager.getOfficeNum());
+    }
+    catch{
+        console.log("error");
+    }
 
+}
+
+managerGen();
 // Write code to use inquirer to gather information about the development team members,
 // and to create objects for each team member (using the correct classes as blueprints!)
 
