@@ -1,0 +1,35 @@
+.jumbotron{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    letter-spacing: 2px;
+    background-color: lightseagreen;
+}
+.title{
+    font-size: 60px;
+}
+.card-header{
+    background-color: rgb(190, 136, 240);
+}
+.card-body{
+    background-color: rgb(86, 86, 160);
+}
+.container{
+    background-color: lightsalmon;
+}
+
+h2{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+h3{
+    font-family: sans-serif;
+    font-style: italic;
+}
+body{
+    background-color: lightsalmon;
+}
+.list-group{
+    background-color: mediumspringgreen;
+}
+.list-group-item{
+    font-family: sans-serif;
+    font-weight: bold;
+}
